@@ -2,6 +2,7 @@ package TokoRetail;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 
 public class Barang {
@@ -11,6 +12,36 @@ public class Barang {
 
     public int stok = 1;
     public String tanggalKadaluarsa;
+
+    Scanner inputScanner = new Scanner(System.in);
+    public void inputDataWithScanner(){
+        try {
+            System.out.println("Inputan Data Barang ");
+
+            System.out.print("Kode : ");
+            kodeBarang = inputScanner.nextLine();
+
+            System.out.print("Nama : ");
+            namaBarang = inputScanner.nextLine();
+
+            System.out.print("Produsen  : ");
+            produsen = inputScanner.nextLine();
+
+            System.out.print("Berat Bersih : ");
+            beratBersih = inputScanner.nextInt();
+
+            System.out.print("Harga Beli   : ");
+            hargaBeli =  inputScanner.nextInt();
+
+            System.out.print("Harga Jual   : ");
+            hargaJual =  inputScanner.nextInt();
+
+            System.out.println();
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
     InputStreamReader isr = new InputStreamReader(System.in);
     BufferedReader input = new BufferedReader(isr);
 
