@@ -8,10 +8,14 @@ import java.util.Scanner;
 public class Barang {
     //Atribut
     String kodeBarang, namaBarang, produsen;
-    int beratBersih, hargaBeli, hargaJual;
+    int beratBersih;
 
-    public int stok = 1;
-    public String tanggalKadaluarsa;
+//    int hargaBeli, hargaJual;
+    double hargaBeli, hargaJual; // ubah tipe data jadi double
+
+
+//    public int stok = 1;
+//    public String tanggalKadaluarsa;
 
     Scanner inputScanner = new Scanner(System.in);
     public void inputDataWithScanner(){
@@ -31,10 +35,12 @@ public class Barang {
             beratBersih = inputScanner.nextInt();
 
             System.out.print("Harga Beli   : ");
-            hargaBeli =  inputScanner.nextInt();
+//            hargaBeli =  inputScanner.nextInt();
+            hargaBeli =  inputScanner.nextDouble(); // ubah jadi double
 
             System.out.print("Harga Jual   : ");
-            hargaJual =  inputScanner.nextInt();
+//            hargaJual =  inputScanner.nextInt();
+            hargaJual =  inputScanner.nextDouble(); // ubah jadi double
 
             System.out.println();
 
@@ -47,7 +53,7 @@ public class Barang {
 
     public void inputData() {
         try {
-            String temp = "";
+//            String temp = "";
             System.out.println("Inputan Data Barang ");
 
             System.out.print("Kode : ");
@@ -60,16 +66,21 @@ public class Barang {
             produsen = input.readLine();
 
             System.out.print("Berat Bersih : ");
-            temp = input.readLine();
-            beratBersih = Integer.parseInt(temp);
+//            temp = input.readLine();
+//            beratBersih = Integer.parseInt(temp);
+            beratBersih = Integer.parseInt(input.readLine()); // tanpa menggunakan temporary
 
             System.out.print("Harga Beli   : ");
-            temp = input.readLine();
-            hargaBeli = Integer.parseInt(temp);
+//            temp = input.readLine();
+//            hargaBeli = Integer.parseInt(temp);
+//            hargaBeli = Integer.parseInt(input.readLine()); // tanpa menggunakan temporary
+            hargaBeli = Double.parseDouble(input.readLine()); // untuk parsing menyesuaikanke double
 
             System.out.print("Harga Jual   : ");
-            temp = input.readLine();
-            hargaJual = Integer.parseInt(temp);
+//            temp = input.readLine();
+//            hargaJual = Integer.parseInt(temp);
+//            hargaJual = Integer.parseInt(input.readLine()); // tanpa menggunakan temporary
+            hargaJual = Double.parseDouble(input.readLine()); // untuk parsing ke double
 
         } catch (Exception e) {
             System.out.println(e);
