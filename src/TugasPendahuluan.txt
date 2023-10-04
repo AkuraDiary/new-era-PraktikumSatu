@@ -1,0 +1,40 @@
+1. Sebutkan tipe data primitif, jelaskan dan berikan contoh yang tepat untuk menggunakan tipe data tersebut. Contoh data minimal 4.
+Jawab :
+Tipe Data Primitive
+- char : Grade Nilai (A, B, C, D, E), Jenis Kelamin (L, P), Simbol, Inisial
+- int : Presensi (1 = masuk, 2 = izin, 3 = sakit, 4=alpha, dst), Jumlah Murid, Stok Barang, Umur
+- float, double : Pi, Nilai / IPK, Tinggi, Berat,
+- boolean : Login State, If-Else, Activities Status, validasi
+
+2. Buatlah sebuah aplikasi yang dapat digunakan untuk menukarkan value dari 2 buah variabel bertipe integer.
+   Contoh :
+
+   Kondisi awal :
+   Isi variabel A adalah 100
+   Isi variabel B adalah 99
+
+   Kondisi akhir :
+   Isi variabel A adalah 99
+   Isi variabel B adalah 100
+
+Jawab :
+
+int A = 100;
+int B = 99;
+
+System.out.println("Kondisi Awal : ");
+System.out.println("Isi variabel A adalah " + A);
+System.out.println("Isi variabel B adalah " + B);
+
+int C = 0;
+
+C = A;
+A = B;
+B = C;
+
+System.out.println();
+
+System.out.println("Kondisi Akhir : ");
+System.out.println("Isi variabel A adalah " + A);
+System.out.println("Isi variabel B adalah " + B);
+
